@@ -12,7 +12,7 @@ Running code-server on Azure App Service
 
 Use image from Docker Hub: `bencdr/code-server-azure`.
 
-Add an app `PASSWORD` to set your password and restart the service. Access through the default URL for the app.
+Add an app setting `PASSWORD` to set your password and restart the service. Access through the default URL for the app.
 
 ## Troubleshooting
 
