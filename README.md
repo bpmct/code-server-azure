@@ -16,4 +16,13 @@ Add an app setting `PASSWORD` to set your password and restart the service. Acce
 
 ## Troubleshooting
 
+You can connect to your code server instance via SSH under `Development Tools -> SSH`
+
 Azure, by default does not support tracking the logs. To enable this, follow these instructions: [https://docs.microsoft.com/en-us/azure/app-service/troubleshoot-diagnostic-logs](https://docs.microsoft.com/en-us/azure/app-service/troubleshoot-diagnostic-logs)
+
+Then, you can preview logs under `Monitoring > Log Stream` or via this with the Azure CLI:
+
+```sh
+$ az webapp log tail --name [app] --resource-group [resource group]
+```
+
