@@ -14,6 +14,7 @@ Usage: {} <port_number>
 class Redirect(BaseHTTPRequestHandler):
    def do_GET(self):
     # get the last line from the code-server logs
+    line = ""
     with open('code-server-logs.txt') as f:
         for line in f:
             pass
