@@ -11,8 +11,9 @@ ENV SHELL=/bin/bash
 # Ensure it runs on port 80
 ENV PORT=80
 
-# Use our custom entrypoint script first
+# Use our custom entrypoint script and our python server
 COPY azure-entrypoint.sh /usr/bin/azure-entrypoint.sh
+COPY miniRedirectServer.py /home/coder/miniRedirectServer.py
 
 USER root
 # Add support for SSHing into the app (https://docs.microsoft.com/en-us/azure/app-service/configure-custom-container?pivots=container-linux#enable-ssh)
@@ -26,7 +27,6 @@ RUN chown -R coder:coder /home/coder
 
 # Fix SSH bug
 RUN mkdir -p /var/run/sshd
-
 RUN mkdir /home/coder/project
 
 ENTRYPOINT ["/usr/bin/azure-entrypoint.sh"]
