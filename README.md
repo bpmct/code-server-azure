@@ -30,6 +30,8 @@ After deploying, you can configure with the following settings (Settings > Confi
 
 ## Troubleshooting
 
+The web server may not redirect to the --link URL correctly off the bat. Restarting the app or waiting for the deployment to complete may fix the issue. After authenticating with GitHub, a single refresh may be necessary to connect to code-server. 
+
 You can connect to your code server instance via SSH under `Development Tools -> SSH`. Logs for code-server and the mini web server are stored in `/home/coder/`.
 
 By default, Azure does not have logging enabled. To enable logs, go to "Monitoring -> App Service Logs" and turn on. Retention period can be set to 1 day. Then, you can preview logs under "Monitoring > Log Stream" or via the Azure CLI:
