@@ -16,6 +16,8 @@ Deploying code-server on Azure App Service. Can use [--link](https://github.com/
 1. Track the status of your deployment via the "Deployment Center"
 1. Hit "Browse" on the app overview page to visit your code-server workspace
 
+## Configuration
+
 After deploying, you can configure with the following settings (Settings > Configuration > Application Settings)
 
 - `LINK_NAME`: A custom name used for code-server --link (ex. `[linkname]-githubusername.cdr.co`)
@@ -24,7 +26,7 @@ After deploying, you can configure with the following settings (Settings > Confi
 - `START_DIR`: The directory code-server opens (default: `/home/coder/project`)
 - `DISABLE_SSH`: Disable SSH access via the Azure portal, saves resources
 
-⚠️  If you are using the **Free (F1) app service plan:** do not set a password. code-server --link will handle your access. See [#2](https://github.com/bpmct/code-server-azure/issues/2) additional info
+⚠️  If you are using the **Free (F1) app service plan:** do not set a password. code-server --link will handle your access. See [#2](https://github.com/bpmct/code-server-azure/issues/2) for details
 
 ## Troubleshooting
 
