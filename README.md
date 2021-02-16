@@ -1,12 +1,13 @@
 # code-server-azure
 
-Deploying code-server on Azure App Service.
+Deploying code-server on Azure App Service. Can use [--link](https://github.com/cdr/code-server#cloud-program-%EF%B8%8F) or an Azure domain.
 
 ## This setup includes
 
-- OpenSSH (connect app via Azure's portal)
+- OpenSSH (connect via Azure's portal)
 - Domain+TLS (Provided by --link or Azure)
 - Authentication (Provided by --link or password)
+- A mini redirect web server (if running --link)
 
 ## How to run
 
